@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Network Intrusion Detection System</title>
+  <link rel="stylesheet" href="assets/css/main.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url('assets/img/wallpaper.jpg'); /* Replace with the correct path to your image */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 100vh;
+      color: white;
+    }
+    #feedback {
+      margin-top: 20px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      background-color: rgba(255, 255, 255, 0.8);
+      display: none;
+      color: black;
+    }
+    #feedback.success {
+      border-color: green;
+      color: green;
+    }
+    #feedback.error {
+      border-color: red;
+      color: red;
+    }
+    .intro--banner {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      border-radius: 10px;
+    }
+    .action-buttons button {
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin: 5px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .action-buttons button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+<div class="perspective effect-rotate-left">
+  <div class="container">
+    <div id="viewport" class="l-viewport">
+      <div class="l-wrapper">
+        <header class="header">
+          <a class="header--logo" href="#">
+          </a>
+        </header>
+        <ul class="l-main-content main-content">
+          <li class="l-section section section--is-active">
+            <div class="intro">
+              <div class="intro--banner">
+                <h1>NETWORK INTRUSION<br>DETECTION<br>SYSTEM</h1>
+                <div class="action-buttons">
+                  <button id="generateLog" class="cta">Generate Log</button>
+                  <button id="signLog" class="cta">Sign Log</button>
+                  <button id="encryptLog" class="cta">Encrypt Log</button>
+                  <button id="createArchive" class="cta">Create Archive</button>
+                </div>
+                <div id="feedback"></div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <ul class="outer-nav">
+    <li class="is-active">Home</li>
+  </ul>
+</div>
+
+<script>
+  /**
+   * Updates the feedback message displayed on the page.
+   * @param {string} message - The feedback message to display.
+   * @param {boolean} isSuccess - Whether the message indicates success or failure.
+   */
+  function updateFeedback(message, isSuccess) {
+    const feedbackDiv = document.getElementById('feedback');
+    feedbackDiv.style.display = 'block';
+    feedbackDiv.className = isSuccess ? 'success' : 'error';
+    feedbackDiv.textContent = message;
+  }
+  
+  // Add the cryptographic hash chain generator
+  function generateHashChain() {
+      // New logic for cryptographic hash chain
+  }
+  // Add checksum 
+</script>
+</body>
+</html
